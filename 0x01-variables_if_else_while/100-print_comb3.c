@@ -1,23 +1,40 @@
 #include <stdio.h>
 
 /**
- * main - print 00 to 99
+ * main - print double digit combos
  *
- * Return: zero
+ * Description: print double digit combos
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; i <= 99; i++)
+	i = 48;
+	j = 48;
+
+	while (i < 58)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		if (i == 99)
-			break;
-		putchar(',');
-		putchar(' ');
+		j = i + 1;
+		while (j < 58)
+		{
+			putchar(i);
+			putchar(j);
+
+			if (i < 56 || j < 57)
+			{
+				putchar(44);
+				putchar(32);
+			}
+			j++;
+		}
+
+		i++;
 	}
-	putchar('\n');
+
+	putchar(10);
+
 	return (0);
 }

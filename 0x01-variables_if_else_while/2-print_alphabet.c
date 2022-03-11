@@ -1,16 +1,23 @@
 #include <stdio.h>
 
 /**
-   * main - print alphabet in lowercase
-   *
-   *Return: zero
-   */
+ * main - print the letters of the alphabet
+ *
+ * Description: print the letters of the alphabet
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-	char ch = 'a';
+	int i = 97;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
-		putchar(ch);
-		putchar('\n');
+	while (i < 123)
+	{
+		putchar(i);
+		i++;
+	}
+	putchar(10);
+
 	return (0);
 }
